@@ -6,7 +6,7 @@
  * @flow strict-local
  */
 
-import React from 'react';
+import * as React from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -15,17 +15,20 @@ import {
   Text,
   View,
 } from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
 
 const App = () => {
   return (
-    <SafeAreaView>
-      <StatusBar barStyle={{}} />
-      <ScrollView contentInsetAdjustmentBehavior="automatic">
-        <View style={{}}>
-          <Text>Home</Text>
-        </View>
-      </ScrollView>
-    </SafeAreaView>
+    <NavigationContainer>
+      <SafeAreaView>
+        <StatusBar barStyle={{}} />
+        <ScrollView contentInsetAdjustmentBehavior="automatic">
+          <View style={{}}>
+            <Text>Home</Text>
+          </View>
+        </ScrollView>
+      </SafeAreaView>
+    </NavigationContainer>
   );
 };
 
